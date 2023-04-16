@@ -22,7 +22,7 @@ const Home = ({user,setUser}) => {
   console.log(localStorage.getItem('Temp'));
   // const us= useContext(UserContext);
 // console.log(getuser());
-
+console.log(user);
 if(localStorage.getItem('name')){
   return (
     <div className="home">

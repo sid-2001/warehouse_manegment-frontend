@@ -144,6 +144,9 @@ var temp;
         valueLabelDisplay="auto"
         marks={marks}
       />
+        <Button variant="contained">Increase Temprature</Button>
+        <Button variant="contained">Decrease Temprature</Button>
+
     </Box>
           {/* {data.isMoney && "$"} {amount} */}
         </span>
@@ -186,6 +189,7 @@ var temp;
         marks={humid}
       />
     </Box>
+    <Button variant="contained">Decrease Humidity</Button>
           {/* {data.isMoney && "$"} {amount} */}
         </span>
         {/* <span className="link">{data.link}</span> */}
@@ -216,6 +220,28 @@ var temp;
         </span>
         {/* <span className="link">{data.link}</span> */}
       </div>
+<br></br>
+      <FormControl fullWidth>
+        <InputLabel variant="standard" htmlFor="uncontrolled-native">
+          Add Crop
+        </InputLabel>
+        <NativeSelect
+          defaultValue={30}
+          inputProps={{
+            name: 'age',
+            id: 'uncontrolled-native',
+          }}
+        >
+          <option value={10}>Aloo</option>
+          <option value={20}>Dragon Fruit</option>
+          <option value={30}>Pumpkin</option>
+          <option value={30}>Okra</option>
+        </NativeSelect>
+
+
+       
+        <Button variant="contained">Add Crop</Button>
+      </FormControl>
       <div className="right">
         <div className="percentage positive">
           {/* <KeyboardArrowUpIcon /> */}

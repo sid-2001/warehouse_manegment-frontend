@@ -87,6 +87,9 @@ const navigate = useNavigate();
 
       }).then(function(data) {
 
+
+  
+
         var currdata={
 
           'crop':data.compartment[0].name,
