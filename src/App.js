@@ -3,7 +3,7 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import Admin from './pages/admin/Admin'
+import Admin from './pages/admin/Admin.tsx'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
@@ -15,10 +15,12 @@ import Dashboard from "@mui/icons-material/Dashboard";
 import Onboarding from "./pages/role/Hr/onboarding/Onboarding";
 import Gettemp from "./Sensor";
 // import { useState, useEffect } from "react";
+import BasicTable from "./pages/dashboardlist/Data_LIst.tsx"
+import Comp from "./pages/addCompartment/Comp"
 function App() {
   const { darkMode } = useContext(DarkModeContext);
-   const [user, setUser ]=useState();
-   const [temp, setTemp] = useState(10);
+  const [user, setUser] = useState();
+  const [temp, setTemp] = useState(10);
 
   //  console.log("the tempratue is ",gettemp())
   //  localStorage.setItem("tempraure",temp);
@@ -28,32 +30,44 @@ function App() {
 
 
 
- 
+
+
+
+
   return (
     <div className={darkMode ? "app dark" : "app"}>
       {/* <UserContext.provider user={user}> */}
       <BrowserRouter>
         <Routes>
-            <Route path="login" element={<Login  user={user} setUser={setUser}/>} />
-      
-           
-          <Route path="/">
-
-            <Route index element={<Home user={user} setUser={setUser}/>} />
-
-           
-           
-
-                 </Route>
+          <Route path="login" element={<Login user={user} setUser={setUser} />} />
 
 
-                 <Route path="/admin">
+          {/* <Route path="/">
+
+            <Route index element={<Home user={user} setUser={setUser} />} />
 
 
-                 <Route index element={<Admin user={user} setUser={setUser}/>} />
-                 </Route>
+
+          </Route> */}
 
 
+          <Route path="/admin">
+
+
+            <Route index element={<Admin/>} />
+          </Route>
+
+          <Route path="/dash">
+
+
+<Route index element={<BasicTable />} />
+</Route>
+
+<Route path="/comp">
+
+
+<Route index element={<Comp />} />
+</Route>
 
 
         </Routes>
@@ -62,7 +76,7 @@ function App() {
     </div>
   );
 
-
+  
 
 }
 

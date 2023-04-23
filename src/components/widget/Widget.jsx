@@ -303,7 +303,7 @@ var temp;
 if(type=="Add New Compartemt"){  return (
     <div className="widget" style={mystyle}>
       <div className="left">
-        <span className="title">{type}</span>
+        <span className="title">{type}</span>z
         <span className="counter"></span>
         <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
